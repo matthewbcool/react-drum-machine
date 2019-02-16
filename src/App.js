@@ -1,20 +1,23 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
-        <p className="App-intro">
-          One day, you will be a drum machine!
-        </p>
+function App() {
+  // Declare a new state variable, which we'll call "count"
+  //const initialState = 'a'
+  // const [keyPlayed, playSound] = useState(initialState)
+
+  return (
+    <div className='container'>
+      <div
+        onClick={() => {
+          return <audio ref='audio_tag' src='sounds/clap.wav' autoPlay />
+        }}>
+        <div className='drum-piece' data-key='65'>
+          A
+        </div>
       </div>
-    );
-  }
+    </div>
+  )
 }
 
-export default App;
+export default App

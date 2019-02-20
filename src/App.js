@@ -1,19 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
-  // Declare a new state variable, which we'll call "count"
-  //const initialState = 'a'
-  // const [keyPlayed, playSound] = useState(initialState)
+  const [snare, setInstrument] = useState('')
+
+  useEffect(() => {})
 
   return (
     <div className='container'>
-      <div
-        onClick={() => {
-          return <audio ref='audio_tag' src='sounds/clap.wav' autoPlay />
-        }}>
-        <div className='drum-piece' data-key='65'>
-          A
+      <div>
+        <div
+          className='drum-piece'
+          data-key='65'
+          onClick={() => {
+            console.log('click confirmed')
+            setInstrument(
+              <audio
+                src='http://www.hazmatt.net/gaming/starcraft/terran/units/marine/tmardy00.wav'
+                autoPlay
+              />
+            )
+          }}>
+          A {snare}
         </div>
       </div>
     </div>

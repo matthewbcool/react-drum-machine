@@ -19,3 +19,8 @@
   padding: 2px 4px;
   white-space: nowrap;
 }
+.stitches-hook {
+  background-image: url('https://gamepedia.cursecdn.com/allstars_gamepedia/2/23/Hook_Icon.png');
+  height: 128px;
+  width: 128px;
+}

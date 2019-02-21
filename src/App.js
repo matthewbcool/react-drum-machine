@@ -23,6 +23,7 @@ function App() {
           }}>
           A {snare}
         </div>
+        <div className='stitches-hook'>h</div>
       </div>
     </div>
   )
